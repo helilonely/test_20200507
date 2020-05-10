@@ -1,0 +1,61 @@
+add:
+  -
+    oper : add
+    a:
+      type: int
+      value: 1
+    b:
+      type: int
+      value: 1
+    expect: 2
+    desc: 两整数相加
+
+  -
+    oper : add
+    a:
+      type: int
+      value: 1
+    b:
+      type: float
+      value: 0.1
+    expect: 1.1
+    desc: 整数加小数
+
+  - oper: add
+    a:
+      type: int
+      value: 1
+    b:
+      type: other
+      value: a
+    expect: typeError
+    desc: 整数加字母
+
+minus:
+  -
+    oper : minus
+    a:
+      type: int
+      value: 1
+    b:
+      type: int
+      value: 1
+    expect: 0
+    desc: 两整数相减
+
+
+#multiply:
+#  -
+#    oper : multiply
+#    a: 1
+#    b: -1
+#    expect: -1
+#    desc: 整数相乘
+#
+#divide:
+#  -
+#    oper : divide
+#    a: 2
+#    b: 0
+#    expect: 除数不能为0
+#    desc: 除0异常
